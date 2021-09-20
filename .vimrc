@@ -40,15 +40,17 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'gruvbox-community/gruvbox'
+" Plug 'gruvbox-community/gruvbox'
 Plug 'leafgarland/typescript-vim'
 Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:Valloric/YouCompleteMe.git'
 Plug 'mbbill/undotree'
-
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tomasr/molokai'
 call plug#end()
 
-colorscheme gruvbox
+colorscheme molokai 
 highlight Normal guibg=none
 
 let mapleader = " "
@@ -60,7 +62,7 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-nnoremap <leader>ps: Rg<SPACE>
+nnoremap <leader>ps :Rg<SPACE>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
 
